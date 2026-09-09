@@ -10,8 +10,12 @@ copyright: Copyright &copy; UMBFY
 theme:
   name: material
   language: en
+  custom_dir: overrides
   logo: https://avatars.githubusercontent.com/u/300522069?s=200&v=4
   favicon: https://avatars.githubusercontent.com/u/300522069?s=200&v=4
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -24,13 +28,19 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
+    - navigation.instant
+    - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
+    - navigation.path
     - navigation.top
     - navigation.footer
+    - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
     - content.action.edit
 
@@ -51,6 +61,16 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/umbfy-docs.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/UMBFY
+      name: UMBFY on GitHub
 
 nav:
   - Home: index.md
