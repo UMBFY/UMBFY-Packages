@@ -1,0 +1,78 @@
+name: Feature Request
+description: Suggest an improvement for an existing UMBFY package or the shared ecosystem
+title: "[Feature]: "
+body:
+  - type: dropdown
+    id: package
+    attributes:
+      label: UMBFY Package
+      options:
+        - UMBFY Content Guard
+        - UMBFY Collaboration
+        - UMBFY Media Order
+        - UMBFY Ecosystem / Shared
+        - New UMBFY Package Idea
+        - Other UMBFY Package
+    validations:
+      required: true
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Current Package Version
+      description: If this relates to an existing package, enter the version you currently use.
+      placeholder: "e.g. 1.0.0"
+
+  - type: dropdown
+    id: umbraco-major
+    attributes:
+      label: Umbraco Version
+      options:
+        - Umbraco 17
+        - Umbraco 18
+        - Multiple / Any supported version
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or workflow to improve
+      description: What problem are you trying to solve? Describe the current workflow or limitation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Suggested solution
+      description: Describe how you would like the package to behave.
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Who would benefit?
+      description: For example editors, developers, agencies, administrators, enterprise teams, or multilingual sites.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Tell us about workarounds or other approaches you have tried.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add screenshots, mockups, examples, or other useful context.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same or a similar request.
+          required: true
+        - label: This request describes the problem/value, not only an implementation preference.
+          required: true
