@@ -2,6 +2,8 @@
 
 Public documentation, guides, tutorials, support, and issue tracking for UMBFY Umbraco packages.
 
+**Official documentation:** https://docs.umbfy.com
+
 UMBFY packages are designed to improve editorial safety, collaboration, media workflows, and enterprise Umbraco operations.
 
 ## Packages
@@ -21,36 +23,36 @@ Highlights:
 - existing-site dependency indexing
 - Content, Media, RTE, Multi URL Picker, and supported nested Block Grid references
 
-[Documentation](docs/content-guard/README.md)
+[Documentation](https://docs.umbfy.com/content-guard/)
 
 ### UMBFY Collaboration
 
 Realtime editing awareness and collaboration features for Umbraco Backoffice teams.
 
-[Documentation](docs/collaboration/README.md)
+[Documentation](https://docs.umbfy.com/collaboration/)
 
 ### UMBFY Media Order
 
 Improve media-library sorting, organization, metadata visibility, and upload workflows.
 
-[Documentation](docs/media-order/README.md)
+[Documentation](https://docs.umbfy.com/media-order/)
 
 ## Documentation
 
-Start at the [UMBFY Documentation Home](docs/README.md).
+The Markdown files in this repository are the canonical documentation source. They are built and deployed automatically to **docs.umbfy.com**.
 
 ### Getting Started
 
-- [Installation](docs/getting-started/installation.md)
-- [Supported Umbraco Versions](docs/getting-started/supported-umbraco-versions.md)
-- [General Troubleshooting](docs/getting-started/troubleshooting.md)
+- [Installation](https://docs.umbfy.com/getting-started/installation/)
+- [Supported Umbraco Versions](https://docs.umbfy.com/getting-started/supported-umbraco-versions/)
+- [General Troubleshooting](https://docs.umbfy.com/getting-started/troubleshooting/)
 
 ### Shared Guides
 
-- [Reporting Issues](docs/shared/reporting-issues.md)
-- [Diagnostics](docs/shared/diagnostics.md)
-- [Versioning](docs/shared/versioning.md)
-- [Compatibility](docs/shared/compatibility.md)
+- [Reporting Issues](https://docs.umbfy.com/shared/reporting-issues/)
+- [Diagnostics](https://docs.umbfy.com/shared/diagnostics/)
+- [Versioning](https://docs.umbfy.com/shared/versioning/)
+- [Compatibility](https://docs.umbfy.com/shared/compatibility/)
 
 ## Support and Feedback
 
