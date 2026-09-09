@@ -1,4 +1,4 @@
-site_name: UMBFY Documentation
+site_name: UMBFY Packages
 site_url: https://docs.umbfy.com
 site_description: Official documentation for UMBFY Umbraco packages
 repo_name: UMBFY/UMBFY-Packages
@@ -10,6 +10,8 @@ copyright: Copyright &copy; UMBFY
 theme:
   name: material
   language: en
+  logo: https://avatars.githubusercontent.com/u/300522069?s=200&v=4
+  favicon: https://avatars.githubusercontent.com/u/300522069?s=200&v=4
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
