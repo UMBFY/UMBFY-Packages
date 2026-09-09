@@ -1,0 +1,147 @@
+name: Bug Report
+description: Report a reproducible problem with a UMBFY package
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve UMBFY packages. Please include enough detail for us to reproduce the issue.
+
+        **Important:** Remove passwords, connection strings, API keys, license keys, personal data, customer URLs, and other sensitive information before submitting logs or screenshots.
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: UMBFY Package
+      description: Which package is affected?
+      options:
+        - UMBFY Content Guard
+        - UMBFY Collaboration
+        - UMBFY Media Order
+        - UMBFY Ecosystem / Shared
+        - Other UMBFY Package
+    validations:
+      required: true
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Package Version
+      description: Exact installed package version.
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: umbraco-major
+    attributes:
+      label: Umbraco Major Version
+      options:
+        - Umbraco 17
+        - Umbraco 18
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: umbraco-version
+    attributes:
+      label: Exact Umbraco Version
+      placeholder: "e.g. 17.4.0 or 18.0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: dotnet-version
+    attributes:
+      label: .NET Version
+      placeholder: "e.g. .NET 10"
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Local development
+        - Development
+        - Test / QA
+        - Staging / Pre-production
+        - Production
+        - Umbraco Cloud
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: hosting
+    attributes:
+      label: Hosting / Topology
+      description: Helpful for issues involving caching, SignalR, load balancing, or background processing.
+      options:
+        - Single instance
+        - Load balanced / multi-node
+        - Umbraco Cloud
+        - Docker / containerized
+        - Unknown / not applicable
+        - Other
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you were doing when it occurred.
+      placeholder: Tell us what happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reliable reproduction you can.
+      placeholder: |
+        1. Install / configure ...
+        2. Open ...
+        3. Perform ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Exception Details
+      description: Paste relevant logs or stack traces. Remove secrets and customer-sensitive information first.
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Recordings
+      description: Drag and drop screenshots or recordings here if they help explain the problem.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Include configuration details, browser version, database provider, or anything else that may be relevant.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I am using a supported version of the package and Umbraco, or I have clearly stated otherwise.
+          required: true
+        - label: I removed secrets, credentials, personal information, and customer-sensitive data from logs/screenshots.
+          required: true
