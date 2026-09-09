@@ -1,0 +1,97 @@
+name: Issue triage
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure labels and classify issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const labels = [
+              { name: 'type: bug', color: 'd73a4a', description: 'A reproducible package defect' },
+              { name: 'type: feature', color: 'a2eeef', description: 'Feature or improvement request' },
+              { name: 'type: support', color: '0075ca', description: 'Usage or configuration support request' },
+              { name: 'status: needs-triage', color: 'fbca04', description: 'Awaiting UMBFY triage' },
+              { name: 'package: content-guard', color: '5319e7', description: 'UMBFY Content Guard' },
+              { name: 'package: collaboration', color: '5319e7', description: 'UMBFY Collaboration' },
+              { name: 'package: media-order', color: '5319e7', description: 'UMBFY Media Order' },
+              { name: 'package: ecosystem', color: '5319e7', description: 'UMBFY ecosystem/shared concern' },
+              { name: 'package: other', color: '5319e7', description: 'Another or future UMBFY package' },
+              { name: 'umbraco: 17', color: '0e8a16', description: 'Applies to Umbraco 17' },
+              { name: 'umbraco: 18', color: '0e8a16', description: 'Applies to Umbraco 18' },
+              { name: 'priority: critical', color: 'b60205', description: 'Release/security/data-loss critical issue' },
+              { name: 'priority: high', color: 'd93f0b', description: 'High-priority confirmed issue' },
+              { name: 'priority: normal', color: 'cfd3d7', description: 'Normal priority' },
+              { name: 'status: needs-info', color: 'd4c5f9', description: 'More information is required from the reporter' },
+              { name: 'status: confirmed', color: '0e8a16', description: 'Issue has been reproduced/confirmed' },
+              { name: 'status: in-progress', color: '1d76db', description: 'A fix or implementation is in progress' },
+              { name: 'status: blocked', color: 'b60205', description: 'Work is currently blocked' },
+              { name: 'status: ready-for-release', color: '006b75', description: 'Resolved and waiting for package release' }
+            ];
+
+            for (const label of labels) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name: label.name });
+              } catch (error) {
+                if (error.status === 404) {
+                  await github.rest.issues.createLabel({ owner, repo, ...label });
+                } else {
+                  throw error;
+                }
+              }
+            }
+
+            if (!context.payload.issue) {
+              core.info('Label taxonomy ensured. No issue payload to classify.');
+              return;
+            }
+
+            const issue = context.payload.issue;
+            const title = issue.title || '';
+            const body = issue.body || '';
+            const add = new Set(['status: needs-triage']);
+
+            if (title.startsWith('[Bug]:')) add.add('type: bug');
+            if (title.startsWith('[Feature]:')) add.add('type: feature');
+            if (title.startsWith('[Support]:')) add.add('type: support');
+
+            const packageMappings = [
+              ['UMBFY Content Guard', 'package: content-guard'],
+              ['UMBFY Collaboration', 'package: collaboration'],
+              ['UMBFY Media Order', 'package: media-order'],
+              ['UMBFY Ecosystem / Shared', 'package: ecosystem'],
+              ['New UMBFY Package Idea', 'package: other'],
+              ['Other UMBFY Package', 'package: other']
+            ];
+
+            for (const [value, label] of packageMappings) {
+              if (body.includes(value)) {
+                add.add(label);
+                break;
+              }
+            }
+
+            if (body.includes('Umbraco 17')) add.add('umbraco: 17');
+            if (body.includes('Umbraco 18')) add.add('umbraco: 18');
+
+            if (add.size > 0) {
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number: issue.number,
+                labels: [...add]
+              });
+            }
