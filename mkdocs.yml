@@ -1,0 +1,86 @@
+site_name: UMBFY Documentation
+site_url: https://docs.umbfy.com
+site_description: Official documentation for UMBFY Umbraco packages
+repo_name: UMBFY/UMBFY-Packages
+repo_url: https://github.com/UMBFY/UMBFY-Packages
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; UMBFY
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: README.md
+      - Installation: getting-started/installation.md
+      - Supported Umbraco Versions: getting-started/supported-umbraco-versions.md
+      - Troubleshooting: getting-started/troubleshooting.md
+  - Content Guard:
+      - Overview: content-guard/README.md
+      - Installation: content-guard/installation.md
+      - Quick Start: content-guard/quick-start.md
+      - Configuration: content-guard/configuration.md
+      - Where Used: content-guard/where-used.md
+      - Safe Delete: content-guard/safe-delete.md
+      - Publish Guard: content-guard/publish-guard.md
+      - Content Health: content-guard/content-health.md
+      - Multilingual Validation: content-guard/multilingual-validation.md
+      - Impact: content-guard/impact.md
+      - Rebuild Index: content-guard/rebuild-index.md
+      - Troubleshooting: content-guard/troubleshooting.md
+      - FAQ: content-guard/faq.md
+  - Collaboration:
+      - Overview: collaboration/README.md
+      - Installation: collaboration/installation.md
+      - Quick Start: collaboration/quick-start.md
+      - Configuration: collaboration/configuration.md
+      - Presence: collaboration/presence.md
+      - Editing Awareness: collaboration/editing-awareness.md
+      - Load-balanced Setup: collaboration/load-balanced-setup.md
+      - Troubleshooting: collaboration/troubleshooting.md
+      - FAQ: collaboration/faq.md
+  - Media Order:
+      - Overview: media-order/README.md
+      - Installation: media-order/installation.md
+      - Quick Start: media-order/quick-start.md
+      - Configuration: media-order/configuration.md
+      - Sorting: media-order/sorting.md
+      - Upload Folders: media-order/upload-folders.md
+      - Troubleshooting: media-order/troubleshooting.md
+      - FAQ: media-order/faq.md
+  - Support:
+      - Reporting Issues: shared/reporting-issues.md
+      - Diagnostics: shared/diagnostics.md
+      - Versioning: shared/versioning.md
+      - Compatibility: shared/compatibility.md
