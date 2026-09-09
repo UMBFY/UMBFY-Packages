@@ -1,0 +1,78 @@
+name: Support / Question
+description: Ask for help using or configuring a UMBFY package
+title: "[Support]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when you need help but are not sure you have found a product defect.
+
+        Do not post passwords, connection strings, API keys, license keys, personal data, or customer-sensitive information.
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: UMBFY Package
+      options:
+        - UMBFY Content Guard
+        - UMBFY Collaboration
+        - UMBFY Media Order
+        - UMBFY Ecosystem / Shared
+        - Other UMBFY Package
+    validations:
+      required: true
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Package Version
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: umbraco-major
+    attributes:
+      label: Umbraco Major Version
+      options:
+        - Umbraco 17
+        - Umbraco 18
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: umbraco-version
+    attributes:
+      label: Exact Umbraco Version
+      placeholder: "e.g. 17.4.0 or 18.0.1"
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Explain what you are trying to achieve and where you are stuck.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: What have you tried?
+      description: Include relevant configuration or steps already attempted.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / screenshots
+      description: Include only sanitized information that is safe to share publicly.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same question or problem.
+          required: true
+        - label: I removed secrets and sensitive information before posting.
+          required: true
