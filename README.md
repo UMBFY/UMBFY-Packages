@@ -1,50 +1,83 @@
-# UMBFY Packages — Issues & Feedback
+# UMBFY Packages
 
-This repository is the public support and feedback tracker for UMBFY Umbraco packages.
+Public documentation, guides, tutorials, support, and issue tracking for UMBFY Umbraco packages.
 
-Use it to:
+UMBFY packages are designed to improve editorial safety, collaboration, media workflows, and enterprise Umbraco operations.
+
+## Packages
+
+### UMBFY Content Guard
+
+Protect Umbraco content relationships before they break.
+
+Highlights:
+
+- Where Used
+- Safe Delete
+- Publish Guard
+- Content Health
+- Multilingual Validation
+- Dependency Impact
+- existing-site dependency indexing
+- Content, Media, RTE, Multi URL Picker, and supported nested Block Grid references
+
+[Documentation](docs/content-guard/README.md)
+
+### UMBFY Collaboration
+
+Realtime editing awareness and collaboration features for Umbraco Backoffice teams.
+
+[Documentation](docs/collaboration/README.md)
+
+### UMBFY Media Order
+
+Improve media-library sorting, organization, metadata visibility, and upload workflows.
+
+[Documentation](docs/media-order/README.md)
+
+## Documentation
+
+Start at the [UMBFY Documentation Home](docs/README.md).
+
+### Getting Started
+
+- [Installation](docs/getting-started/installation.md)
+- [Supported Umbraco Versions](docs/getting-started/supported-umbraco-versions.md)
+- [General Troubleshooting](docs/getting-started/troubleshooting.md)
+
+### Shared Guides
+
+- [Reporting Issues](docs/shared/reporting-issues.md)
+- [Diagnostics](docs/shared/diagnostics.md)
+- [Versioning](docs/shared/versioning.md)
+- [Compatibility](docs/shared/compatibility.md)
+
+## Support and Feedback
+
+Use this repository to:
 
 - report reproducible bugs
 - request features and improvements
 - ask package usage/configuration questions
+- improve package documentation
 
-## Before opening an issue
+See [SUPPORT.md](SUPPORT.md) before opening an issue.
 
-Please search existing issues first. Include the affected package, exact package version, Umbraco version, environment, and clear reproduction steps where applicable.
+### Issue Forms
+
+The repository provides forms for:
+
+- Bug Report
+- Feature Request
+- Support / Question
+
+Please include the affected package, exact package version, Umbraco version, environment/topology, reproduction steps, and sanitized logs/screenshots where applicable.
 
 Never post passwords, connection strings, API keys, license keys, personal information, customer-sensitive URLs, or other secrets in public issues.
 
-## Supported issue forms
+## Issue Organization
 
-### Bug Report
-
-Use this when a UMBFY package behaves incorrectly or throws an error.
-
-Please include:
-
-- UMBFY package
-- exact package version
-- Umbraco major and exact version
-- .NET version where relevant
-- environment/topology
-- expected behavior
-- actual behavior
-- reproduction steps
-- sanitized logs/screenshots
-
-### Feature Request
-
-Use this to suggest an improvement to an existing package, a shared UMBFY capability, or a future package idea.
-
-Please focus on the problem/workflow and who benefits, not only on an implementation preference.
-
-### Support / Question
-
-Use this when you need help configuring or using a UMBFY package and are not yet sure you have found a product defect.
-
-## Package identification
-
-Issues are organized by package using labels such as:
+Issues are categorized with package labels such as:
 
 - `package: content-guard`
 - `package: collaboration`
@@ -52,47 +85,39 @@ Issues are organized by package using labels such as:
 - `package: ecosystem`
 - `package: other`
 
-Package versions are captured as a required issue-form field rather than creating a label for every released version. This keeps the label taxonomy manageable while preserving exact version information for support and regression analysis.
-
-## Umbraco compatibility labels
-
-Issues may be classified with:
+Umbraco compatibility labels include:
 
 - `umbraco: 17`
 - `umbraco: 18`
 
-## Issue type labels
+Issue type labels include:
 
 - `type: bug`
 - `type: feature`
 - `type: support`
 
-## Triage status labels
+Package versions are captured as issue-form fields rather than creating a label for every release.
 
-- `status: needs-triage`
-- `status: needs-info`
-- `status: confirmed`
-- `status: in-progress`
-- `status: blocked`
-- `status: ready-for-release`
+## Documentation Strategy
 
-## Priority labels
+This repository is the canonical public documentation source for UMBFY packages.
 
-- `priority: critical`
-- `priority: high`
-- `priority: normal`
+The same documentation should be linked from:
 
-Priority is assigned during UMBFY triage. Reporters do not need to choose it.
+- NuGet
+- Umbraco Marketplace
+- package Backoffice help actions
+- the future UMBFY Hub
 
-## Automatic triage
+Package-specific documentation should follow a consistent structure: overview, installation, quick start, configuration, feature guides, troubleshooting, FAQ, and task-oriented tutorials.
 
-The repository includes an issue-triage workflow that ensures the standard label taxonomy exists and automatically applies package, Umbraco-major, issue-type, and initial triage labels when possible.
+## Contributing
 
-## Package support links
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Each UMBFY package README and, later, the UMBFY Hub should link users to this repository for issue reporting and feedback.
+## Security
 
-When the UMBFY Hub is introduced, package name/version and Umbraco version can be pre-filled or attached to the support flow so users have less information to enter manually.
+See [SECURITY.md](SECURITY.md) before reporting a security-sensitive issue publicly.
 
 ---
 
