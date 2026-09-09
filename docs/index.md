@@ -5,7 +5,7 @@ hide:
 ---
 
 <section class="umbfy-hero">
-  <div class="umbfy-hero__eyebrow">UMBFY DOCUMENTATION</div>
+  <div class="umbfy-hero__eyebrow">UMBFY PACKAGES</div>
   <h1>Better tools for<br><span>serious Umbraco teams.</span></h1>
   <p>Guides, tutorials and technical reference for UMBFY packages built to make Umbraco safer, clearer and easier to operate.</p>
   <div class="umbfy-actions">
@@ -14,7 +14,7 @@ hide:
   </div>
 </section>
 
-<section class="umbfy-stats" aria-label="UMBFY documentation highlights">
+<section class="umbfy-stats" aria-label="UMBFY package documentation highlights">
   <div><strong>3+</strong><span>Package experiences</span></div>
   <div><strong>17 / 18</strong><span>Umbraco versions</span></div>
   <div><strong>1</strong><span>Documentation home</span></div>
