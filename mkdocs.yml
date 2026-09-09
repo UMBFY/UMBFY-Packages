@@ -42,7 +42,6 @@ extra_css:
 nav:
   - Home: index.md
   - Getting Started:
-      - Overview: README.md
       - Installation: getting-started/installation.md
       - Supported Umbraco Versions: getting-started/supported-umbraco-versions.md
       - Troubleshooting: getting-started/troubleshooting.md
@@ -58,6 +57,11 @@ nav:
       - Multilingual Validation: content-guard/multilingual-validation.md
       - Impact: content-guard/impact.md
       - Rebuild Index: content-guard/rebuild-index.md
+      - Tutorials:
+          - Overview: content-guard/tutorials/README.md
+          - Find Existing References: content-guard/tutorials/find-existing-references.md
+          - Protect Content Before Delete: content-guard/tutorials/protect-content-before-delete.md
+          - Validate Multilingual Content: content-guard/tutorials/validate-multilingual-content.md
       - Troubleshooting: content-guard/troubleshooting.md
       - FAQ: content-guard/faq.md
   - Collaboration:
