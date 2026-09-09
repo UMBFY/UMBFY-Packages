@@ -101,3 +101,6 @@ nav:
       - Diagnostics: shared/diagnostics.md
       - Versioning: shared/versioning.md
       - Compatibility: shared/compatibility.md
+      - Documentation Standard: shared/documentation-standard.md
+      - Screenshot Guide: shared/screenshot-guide.md
+      - Release Documentation Checklist: shared/release-documentation-checklist.md
